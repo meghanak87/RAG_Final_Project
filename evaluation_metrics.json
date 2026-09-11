@@ -1,0 +1,438 @@
+{
+  "benchmark_summary": {
+    "total_questions": 50,
+    "categories": [
+      "factual",
+      "conceptual",
+      "comparison",
+      "multi-hop",
+      "summarization",
+      "unanswerable"
+    ],
+    "models_evaluated": [
+      "BGE-M3",
+      "Multilingual-E5-large",
+      "BGE-large-en-v1.5",
+      "MiniLM",
+      "Nomic Embed Text v1.5",
+      "Dynamic Selection"
+    ],
+    "unbiased_selection_status": "Active (Z-score + Discriminative Margin + Query Alignment)"
+  },
+  "dynamic_selection": {
+    "total_questions": 50,
+    "recall_at_1": 0.96,
+    "recall_at_3": 1.0,
+    "recall_at_5": 1.0,
+    "mrr": 0.9767,
+    "average_latency_ms": 89.21,
+    "answer_correctness": 0.4741,
+    "answer_relevance": 0.497,
+    "grounding_score": 1.0,
+    "unanswerable_detection_accuracy": 1.0,
+    "false_answer_count": 0,
+    "by_category": {
+      "factual": {
+        "count": 12,
+        "recall_at_3": 1.0,
+        "mrr": 1.0,
+        "correctness": 0.5767,
+        "grounding": 1.0
+      },
+      "conceptual": {
+        "count": 10,
+        "recall_at_3": 1.0,
+        "mrr": 1.0,
+        "correctness": 0.4085,
+        "grounding": 1.0
+      },
+      "comparison": {
+        "count": 9,
+        "recall_at_3": 1.0,
+        "mrr": 0.9259,
+        "correctness": 0.4661,
+        "grounding": 1.0
+      },
+      "multi-hop": {
+        "count": 8,
+        "recall_at_3": 1.0,
+        "mrr": 0.9375,
+        "correctness": 0.2847,
+        "grounding": 1.0
+      },
+      "summarization": {
+        "count": 6,
+        "recall_at_3": 1.0,
+        "mrr": 1.0,
+        "correctness": 0.2046,
+        "grounding": 1.0
+      },
+      "unanswerable": {
+        "count": 5,
+        "recall_at_3": 1.0,
+        "mrr": 1.0,
+        "correctness": 1.0,
+        "grounding": 1.0
+      }
+    },
+    "selection_distribution": {
+      "BGE-M3": {
+        "count": 5,
+        "percentage": 10.0
+      },
+      "Multilingual-E5-large": {
+        "count": 19,
+        "percentage": 38.0
+      },
+      "BGE-large-en-v1.5": {
+        "count": 12,
+        "percentage": 24.0
+      },
+      "MiniLM": {
+        "count": 0,
+        "percentage": 0.0
+      },
+      "Nomic Embed Text v1.5": {
+        "count": 14,
+        "percentage": 28.0
+      }
+    }
+  },
+  "models": {
+    "BGE-M3": {
+      "total_questions": 50,
+      "recall_at_1": 0.96,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 0.9767,
+      "average_latency_ms": 38.5,
+      "answer_correctness": 0.4618,
+      "answer_relevance": 0.4121,
+      "grounding_score": 0.92,
+      "unanswerable_detection_accuracy": 0.2,
+      "false_answer_count": 4,
+      "by_category": {
+        "factual": {
+          "count": 12,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.6139,
+          "grounding": 1.0
+        },
+        "conceptual": {
+          "count": 10,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.4689,
+          "grounding": 1.0
+        },
+        "comparison": {
+          "count": 9,
+          "recall_at_3": 1.0,
+          "mrr": 0.9259,
+          "correctness": 0.5097,
+          "grounding": 1.0
+        },
+        "multi-hop": {
+          "count": 8,
+          "recall_at_3": 1.0,
+          "mrr": 0.9375,
+          "correctness": 0.2938,
+          "grounding": 1.0
+        },
+        "summarization": {
+          "count": 6,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.516,
+          "grounding": 1.0
+        },
+        "unanswerable": {
+          "count": 5,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.2,
+          "grounding": 0.2
+        }
+      }
+    },
+    "Multilingual-E5-large": {
+      "total_questions": 50,
+      "recall_at_1": 0.96,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 0.9767,
+      "average_latency_ms": 44.2,
+      "answer_correctness": 0.4618,
+      "answer_relevance": 0.4121,
+      "grounding_score": 0.92,
+      "unanswerable_detection_accuracy": 0.2,
+      "false_answer_count": 4,
+      "by_category": {
+        "factual": {
+          "count": 12,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.6139,
+          "grounding": 1.0
+        },
+        "conceptual": {
+          "count": 10,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.4689,
+          "grounding": 1.0
+        },
+        "comparison": {
+          "count": 9,
+          "recall_at_3": 1.0,
+          "mrr": 0.9259,
+          "correctness": 0.5097,
+          "grounding": 1.0
+        },
+        "multi-hop": {
+          "count": 8,
+          "recall_at_3": 1.0,
+          "mrr": 0.9375,
+          "correctness": 0.2938,
+          "grounding": 1.0
+        },
+        "summarization": {
+          "count": 6,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.516,
+          "grounding": 1.0
+        },
+        "unanswerable": {
+          "count": 5,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.2,
+          "grounding": 0.2
+        }
+      }
+    },
+    "BGE-large-en-v1.5": {
+      "total_questions": 50,
+      "recall_at_1": 0.96,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 0.9767,
+      "average_latency_ms": 36.8,
+      "answer_correctness": 0.4618,
+      "answer_relevance": 0.4121,
+      "grounding_score": 0.92,
+      "unanswerable_detection_accuracy": 0.2,
+      "false_answer_count": 4,
+      "by_category": {
+        "factual": {
+          "count": 12,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.6139,
+          "grounding": 1.0
+        },
+        "conceptual": {
+          "count": 10,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.4689,
+          "grounding": 1.0
+        },
+        "comparison": {
+          "count": 9,
+          "recall_at_3": 1.0,
+          "mrr": 0.9259,
+          "correctness": 0.5097,
+          "grounding": 1.0
+        },
+        "multi-hop": {
+          "count": 8,
+          "recall_at_3": 1.0,
+          "mrr": 0.9375,
+          "correctness": 0.2938,
+          "grounding": 1.0
+        },
+        "summarization": {
+          "count": 6,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.516,
+          "grounding": 1.0
+        },
+        "unanswerable": {
+          "count": 5,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.2,
+          "grounding": 0.2
+        }
+      }
+    },
+    "MiniLM": {
+      "total_questions": 50,
+      "recall_at_1": 0.96,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 0.9767,
+      "average_latency_ms": 7.4,
+      "answer_correctness": 0.4618,
+      "answer_relevance": 0.4121,
+      "grounding_score": 0.92,
+      "unanswerable_detection_accuracy": 0.2,
+      "false_answer_count": 4,
+      "by_category": {
+        "factual": {
+          "count": 12,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.6139,
+          "grounding": 1.0
+        },
+        "conceptual": {
+          "count": 10,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.4689,
+          "grounding": 1.0
+        },
+        "comparison": {
+          "count": 9,
+          "recall_at_3": 1.0,
+          "mrr": 0.9259,
+          "correctness": 0.5097,
+          "grounding": 1.0
+        },
+        "multi-hop": {
+          "count": 8,
+          "recall_at_3": 1.0,
+          "mrr": 0.9375,
+          "correctness": 0.2938,
+          "grounding": 1.0
+        },
+        "summarization": {
+          "count": 6,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.516,
+          "grounding": 1.0
+        },
+        "unanswerable": {
+          "count": 5,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.2,
+          "grounding": 0.2
+        }
+      }
+    },
+    "Nomic Embed Text v1.5": {
+      "total_questions": 50,
+      "recall_at_1": 0.96,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 0.9767,
+      "average_latency_ms": 24.1,
+      "answer_correctness": 0.4618,
+      "answer_relevance": 0.4121,
+      "grounding_score": 0.92,
+      "unanswerable_detection_accuracy": 0.2,
+      "false_answer_count": 4,
+      "by_category": {
+        "factual": {
+          "count": 12,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.6139,
+          "grounding": 1.0
+        },
+        "conceptual": {
+          "count": 10,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.4689,
+          "grounding": 1.0
+        },
+        "comparison": {
+          "count": 9,
+          "recall_at_3": 1.0,
+          "mrr": 0.9259,
+          "correctness": 0.5097,
+          "grounding": 1.0
+        },
+        "multi-hop": {
+          "count": 8,
+          "recall_at_3": 1.0,
+          "mrr": 0.9375,
+          "correctness": 0.2938,
+          "grounding": 1.0
+        },
+        "summarization": {
+          "count": 6,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.516,
+          "grounding": 1.0
+        },
+        "unanswerable": {
+          "count": 5,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.2,
+          "grounding": 0.2
+        }
+      }
+    }
+  },
+  "category_breakdown": {
+    "factual": {
+      "count": 12,
+      "recall_at_3": 1.0,
+      "mrr": 1.0,
+      "correctness": 0.5767,
+      "grounding": 1.0
+    },
+    "conceptual": {
+      "count": 10,
+      "recall_at_3": 1.0,
+      "mrr": 1.0,
+      "correctness": 0.4085,
+      "grounding": 1.0
+    },
+    "comparison": {
+      "count": 9,
+      "recall_at_3": 1.0,
+      "mrr": 0.9259,
+      "correctness": 0.4661,
+      "grounding": 1.0
+    },
+    "multi-hop": {
+      "count": 8,
+      "recall_at_3": 1.0,
+      "mrr": 0.9375,
+      "correctness": 0.2847,
+      "grounding": 1.0
+    },
+    "summarization": {
+      "count": 6,
+      "recall_at_3": 1.0,
+      "mrr": 1.0,
+      "correctness": 0.2046,
+      "grounding": 1.0
+    },
+    "unanswerable": {
+      "count": 5,
+      "recall_at_3": 1.0,
+      "mrr": 1.0,
+      "correctness": 1.0,
+      "grounding": 1.0
+    }
+  },
+  "unanswerable_evaluation": {
+    "total_unanswerable": 5,
+    "unanswerable_detection_accuracy": 1.0,
+    "false_answer_count": 0,
+    "status": "PASSED - No false answers generated"
+  }
+}

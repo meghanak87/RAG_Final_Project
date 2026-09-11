@@ -1,0 +1,78 @@
+--- Page 1 ---
+ENTERPRISE AI ARCHITECTURE AND GOVERNANCE SPECIFICATION 2025
+Document Identifier: SPEC-EAIG-2025-V4
+Source Reference: Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf
+
+1. ARCHITECTURAL OVERVIEW AND INGESTION PIPELINE
+The Enterprise Document Intelligence Platform is designed to orchestrate end-to-end Retrieval-Augmented Generation (RAG) across heterogeneous enterprise documents. The core ingestion pipeline comprises four linear stages: (1) Document Ingestion and PDF Parsing, (2) Semantic Sliding-Window Chunking, (3) Multi-Model Embedding Generation across five specialized vector topologies, and (4) FAISS Vector Indexing with inner-product similarity geometry. 
+
+Incoming documents are validated against strict structural integrity checks. The PDF extraction subsystem isolates textual streams while retaining rigorous page boundary offsets, font weight differentials, and structural hierarchy markers. In accordance with Section 1.3, documents exceeding 50 MB or 1,200 pages are segmented into batch processing shards to ensure uninterrupted throughput and prevent memory saturation.
+
+--- Page 2 ---
+2. EMBEDDING SPECIFICATIONS ACROSS FIVE TOPOLOGIES
+The platform deploys a parallel array of five high-performance dense embedding models to accommodate diverse query semantics:
+- BGE-M3 (BAAI/bge-m3): 1024-dimensional dense representation with multi-vector lexical and sparse capabilities, optimized for multilingual and long-context technical queries up to 8,192 tokens.
+- Multilingual-E5-large (intfloat/multilingual-e5-large): 1024-dimensional model requiring asymmetric prefixing ('query: ' for queries, 'passage: ' for documents). It demonstrates compressed high-cosine score manifolds, typically ranging between 0.78 and 0.96.
+- BGE-large-en-v1.5 (BAAI/bge-large-en-v1.5): 1024-dimensional English-specialized model utilizing the query instruction 'Represent this sentence for searching relevant passages: '. It excels in precise dense factual retrieval.
+- MiniLM (all-MiniLM-L6-v2): 384-dimensional compact model with a typical latency profile of 7.4 ms, engineered for ultra-fast edge inference and low-latency keyword-adjacent queries.
+- Nomic Embed Text v1.5 (nomic-ai/nomic-embed-text-v1.5): 768-dimensional model featuring dynamic Matryoshka dimension scaling and an 8,192-token context window with prefix tags 'search_query: ' and 'search_document: '.
+
+--- Page 3 ---
+3. CHUNKING STRATEGIES AND TOKEN BOUNDARY STANDARDS
+To optimize semantic cohesion without sacrificing context continuity, the chunker enforces a dynamic sliding-window strategy. The canonical configuration defines a target chunk length of 250 words (approximately 325 tokens) with a fixed consecutive overlap of 50 words (approximately 65 tokens). 
+
+Section 3.2 specifies that chunk boundaries must never sever mid-sentence constructs. Sentences are isolated using deterministic punctuation boundary detection. In scenarios where a single technical statement exceeds the maximum word budget, secondary clause-level segmentation is invoked. Each chunk header immutably encapsulates its origin source filename, integer page number, chunk identifier index, and total character count to enable deterministic citation attribution.
+
+--- Page 4 ---
+4. VECTOR INDEXING AND FAISS TOPOLOGY
+Vector indexing is implemented utilizing the FAISS (Facebook AI Similarity Search) framework. Because cosine similarity is the foundational geometric distance metric across all five models, all embedded vectors undergo L2-normalization prior to index insertion. Consequently, inner product calculation (IndexFlatIP) is mathematically equivalent to cosine similarity while operating at maximum hardware velocity.
+
+Index partitions are maintained independently for each of the five embedding topologies to prevent dimensionality collisions. For high-scale collections exceeding 500,000 vectors, HNSW (Hierarchical Navigable Small World) graph topology with M=32 links per node and efConstruction=64 is deployed to maintain sub-15ms retrieval latency with recall degradation under 1.2%.
+
+--- Page 5 ---
+5. QUERY-LEVEL DYNAMIC MODEL SELECTION POLICY
+Section 5 defines the Dynamic Embedding Model Selection algorithm. In traditional setups, comparing raw cosine similarities across heterogeneous embedding models produces severe distortion; specifically, Multilingual-E5-large exhibits an elevated baseline cosine distribution (mean 0.84), leading to an uncalibrated 100% win-rate if raw scores are compared directly.
+
+To eliminate this systemic bias, the platform implements a three-factor calibrated selection function:
+1. Calibrated Z-Score Normalization: The raw Top-1 similarity is normalized against the model's empirical baseline mean and standard deviation: Z = (s1 - mean) / std.
+2. Discriminative Confidence Margin: The distinctiveness gap between Top-1 and Top-3 retrieval scores (Margin = s1 - s3) measures the model's confidence in identifying a singular relevant passage rather than uniformly elevated noise.
+3. Query Topology Alignment: Contextual weighting allocates bonuses based on query characteristics—such as multi-vector bonuses for BGE-M3 on multi-hop questions, factual precision bonuses for BGE-large-en, and latency-efficiency weighting for MiniLM.
+
+--- Page 6 ---
+6. GOOGLE GEMINI INTEGRATION AND GROUNDED GENERATION
+Selected evidence retrieved by the dynamic model selection module is formatted into an immutable citation context block and supplied to the Google Gemini model. System instructions enforce strict grounding: Gemini is restricted to synthesizing answers solely from facts explicitly stated in the retrieved evidence.
+
+Temperature is constrained to 0.1 to suppress speculative extrapolation. If the supplied evidence context fails to establish conclusive factual support for the query, Gemini is instructed to emit an unambiguous refusal statement: "The provided document does not contain information to answer this question." The maximum output token ceiling is set to 350 tokens to guarantee concise, digestible executive summaries.
+
+--- Page 7 ---
+7. LATENCY BUDGETS, THROUGHPUT SLAS, AND CACHING
+The operational Service Level Agreement (SLA) establishes stringent response time thresholds:
+- End-to-end RAG response latency must remain under 1,800 ms at the 95th percentile (P95).
+- Retrieval latency per model is strictly budgeted: MiniLM <= 12 ms, Nomic Embed <= 30 ms, BGE-large-en <= 45 ms, BGE-M3 <= 50 ms, and E5-large <= 55 ms.
+- Dynamic selection evaluation overhead must not exceed 8 ms.
+
+To achieve these benchmarks, the platform employs a two-tier caching architecture: Level-1 caches document page extractions and segmented chunks in local memory, while Level-2 caches pre-computed vector embeddings to eliminate redundant neural model forward passes during re-indexing.
+
+--- Page 8 ---
+8. GROUNDING VERIFICATION AND FACTUALITY SCORING
+Every answer emitted by the generation module is subjected to automated Grounding Verification prior to presentation. The grounding verification engine tokenizes the generated response into discrete propositional claims and computes token containment and semantic overlap against the retrieved evidence chunks.
+
+The Grounding Score represents the ratio of supported propositional tokens to total response tokens. Answers are categorized into three distinct confidence regimes:
+- Supported (Score >= 0.70): High evidential alignment; answer is rendered with green citation indicators.
+- Partially Supported (0.35 <= Score < 0.70): Minor extrapolation detected; user receives a warning pill.
+- Unsupported (Score < 0.35): Hallucination flag triggered; output is suppressed or flagged for human audit.
+
+--- Page 9 ---
+9. UNANSWERABLE QUERY DETECTION AND REFUSAL POLICIES
+Section 9 mandates robust containment of unanswerable and out-of-scope inquiries. A query is classified as unanswerable when either: (1) all five embedding models report Top-1 normalized relevance scores below the noise ceiling threshold (0.28), or (2) the dynamic model selection module determines that retrieved evidence contains zero intersecting technical entities.
+
+For unanswerable benchmark questions, the system must not fabricate plausible-sounding answers. A correct evaluation output requires an explicit statement confirming that the requested topic is not contained within the document. The benchmark specifically tracks Unanswerable Detection Accuracy (target >= 80%) and strictly penalizes any False Answers (invented answers).
+
+--- Page 10 ---
+10. SECURITY, ACCESS CONTROLS (RBAC), AND AUDIT LOGGING
+All interactions within the Document Intelligence platform are governed by Role-Based Access Control (RBAC). Three distinct access tiers are enforced:
+- Viewer: Permitted to submit queries and inspect grounded answers with citations.
+- Analyst: Granted permission to view model comparison telemetry, latency distributions, and similarity curves.
+- Administrator: Authorized to ingest new document corpora, re-run benchmark evaluations, and alter chunking parameters.
+
+All transactions, retrieved chunk IDs, dynamic model selection rationales, and generated outputs are recorded in an append-only JSON audit log retaining SHA-256 integrity hashes for compliance with ISO 27001 and SOC 2 Type II standards.

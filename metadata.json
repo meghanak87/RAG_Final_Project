@@ -1,0 +1,6 @@
+{
+  "name": "RAG Document Intelligence & Benchmark Studio",
+  "description": "Multi-model RAG Document Intelligence with 5 Embedding Models, FAISS retrieval, Dynamic Model Selection, Grounded Gemini generation, and a 50-question Ground Truth Benchmark Evaluation dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,452 @@
+[
+  {
+    "id": "BM-001",
+    "question": "What are the four linear stages of the core ingestion pipeline?",
+    "category": "factual",
+    "ground_truth": "The four linear stages are (1) Document Ingestion and PDF Parsing, (2) Semantic Sliding-Window Chunking, (3) Multi-Model Embedding Generation across five specialized vector topologies, and (4) FAISS Vector Indexing with inner-product similarity geometry.",
+    "expected_evidence": "core ingestion pipeline comprises four linear stages: (1) Document Ingestion and PDF Parsing, (2) Semantic Sliding-Window Chunking, (3) Multi-Model Embedding Generation across five specialized vector topologies, and (4) FAISS Vector Indexing",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 1
+  },
+  {
+    "id": "BM-002",
+    "question": "What threshold of document size or page count triggers batch processing shards?",
+    "category": "factual",
+    "ground_truth": "Documents exceeding 50 MB or 1,200 pages are segmented into batch processing shards.",
+    "expected_evidence": "documents exceeding 50 MB or 1,200 pages are segmented into batch processing shards",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 1
+  },
+  {
+    "id": "BM-003",
+    "question": "What is the dimensional size and maximum token context for BGE-M3?",
+    "category": "factual",
+    "ground_truth": "BGE-M3 has a 1024-dimensional dense representation and supports long-context queries up to 8,192 tokens.",
+    "expected_evidence": "BGE-M3 (BAAI/bge-m3): 1024-dimensional dense representation with multi-vector lexical and sparse capabilities, optimized for multilingual and long-context technical queries up to 8,192 tokens",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 2
+  },
+  {
+    "id": "BM-004",
+    "question": "What query and passage prefixes are required by Multilingual-E5-large?",
+    "category": "factual",
+    "ground_truth": "Multilingual-E5-large requires 'query: ' for queries and 'passage: ' for documents.",
+    "expected_evidence": "requiring asymmetric prefixing ('query: ' for queries, 'passage: ' for documents)",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 2
+  },
+  {
+    "id": "BM-005",
+    "question": "What specific query instruction is utilized by BGE-large-en-v1.5?",
+    "category": "factual",
+    "ground_truth": "BGE-large-en-v1.5 utilizes the instruction: 'Represent this sentence for searching relevant passages: '.",
+    "expected_evidence": "utilizing the query instruction 'Represent this sentence for searching relevant passages: '",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 2
+  },
+  {
+    "id": "BM-006",
+    "question": "What is the typical inference latency of MiniLM?",
+    "category": "factual",
+    "ground_truth": "MiniLM has a typical latency profile of 7.4 ms.",
+    "expected_evidence": "MiniLM (all-MiniLM-L6-v2): 384-dimensional compact model with a typical latency profile of 7.4 ms",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 2
+  },
+  {
+    "id": "BM-007",
+    "question": "What is the target chunk length and overlap specified in Section 3?",
+    "category": "factual",
+    "ground_truth": "The target chunk length is 250 words (approximately 325 tokens) with a fixed consecutive overlap of 50 words (approximately 65 tokens).",
+    "expected_evidence": "target chunk length of 250 words (approximately 325 tokens) with a fixed consecutive overlap of 50 words (approximately 65 tokens)",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 3
+  },
+  {
+    "id": "BM-008",
+    "question": "Which FAISS index type is used and how is cosine equivalence achieved?",
+    "category": "factual",
+    "ground_truth": "FAISS IndexFlatIP (inner product) is used, and cosine equivalence is achieved by L2-normalizing all embedded vectors prior to index insertion.",
+    "expected_evidence": "all embedded vectors undergo L2-normalization prior to index insertion. Consequently, inner product calculation (IndexFlatIP) is mathematically equivalent to cosine similarity",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 4
+  },
+  {
+    "id": "BM-009",
+    "question": "What temperature value is enforced for Google Gemini generation?",
+    "category": "factual",
+    "ground_truth": "The temperature is constrained to 0.1 to suppress speculative extrapolation.",
+    "expected_evidence": "Temperature is constrained to 0.1 to suppress speculative extrapolation",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 6
+  },
+  {
+    "id": "BM-010",
+    "question": "What is the end-to-end P95 latency SLA for the RAG platform?",
+    "category": "factual",
+    "ground_truth": "End-to-end RAG response latency must remain under 1,800 ms at the 95th percentile (P95).",
+    "expected_evidence": "End-to-end RAG response latency must remain under 1,800 ms at the 95th percentile (P95)",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 7
+  },
+  {
+    "id": "BM-011",
+    "question": "What threshold qualifies an answer as Supported in Grounding Verification?",
+    "category": "factual",
+    "ground_truth": "An answer qualifies as Supported when the Grounding Score is greater than or equal to 0.70.",
+    "expected_evidence": "Supported (Score >= 0.70): High evidential alignment; answer is rendered with green citation indicators",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 8
+  },
+  {
+    "id": "BM-012",
+    "question": "What are the three RBAC access tiers enforced by the system?",
+    "category": "factual",
+    "ground_truth": "The three access tiers are Viewer, Analyst, and Administrator.",
+    "expected_evidence": "Three distinct access tiers are enforced: Viewer, Analyst, and Administrator",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 10
+  },
+  {
+    "id": "BM-013",
+    "question": "Explain the concept of semantic sliding-window chunking and why sentence severance is prevented.",
+    "category": "conceptual",
+    "ground_truth": "Semantic sliding-window chunking creates overlapping blocks of text (250 words with 50-word overlap) to maintain contextual continuity across adjacent chunks. Sentence severance is prevented using deterministic punctuation boundary detection so that thoughts and factual propositions are preserved intact.",
+    "expected_evidence": "optimize semantic cohesion without sacrificing context continuity, the chunker enforces a dynamic sliding-window strategy... chunk boundaries must never sever mid-sentence constructs",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 3
+  },
+  {
+    "id": "BM-014",
+    "question": "How does L2 vector normalization enable fast inner product search in FAISS?",
+    "category": "conceptual",
+    "ground_truth": "When vectors are L2-normalized, the Euclidean norm of each vector equals 1. Under this condition, the inner product between two vectors is mathematically identical to their cosine similarity, allowing high-speed IndexFlatIP hardware execution.",
+    "expected_evidence": "all embedded vectors undergo L2-normalization prior to index insertion. Consequently, inner product calculation (IndexFlatIP) is mathematically equivalent to cosine similarity",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 4
+  },
+  {
+    "id": "BM-015",
+    "question": "Why does comparing raw cosine scores across heterogeneous embedding models lead to biased model selection?",
+    "category": "conceptual",
+    "ground_truth": "Different embedding models have distinct manifold geometries and score distributions. For example, Multilingual-E5-large has a high baseline distribution with mean 0.84, while other models like BGE-large or MiniLM have lower means. Direct comparison causes the model with the higher baseline to win unconditionally regardless of actual retrieval quality.",
+    "expected_evidence": "Multilingual-E5-large exhibits an elevated baseline cosine distribution (mean 0.84), leading to an uncalibrated 100% win-rate if raw scores are compared directly",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 5
+  },
+  {
+    "id": "BM-016",
+    "question": "What is the conceptual purpose of discriminative confidence margin in dynamic model selection?",
+    "category": "conceptual",
+    "ground_truth": "The discriminative confidence margin (s1 - s3) measures whether a model clearly distinguishes a single highly relevant chunk from lower-ranked chunks, demonstrating focused confidence rather than returning a uniformly elevated baseline.",
+    "expected_evidence": "distinctiveness gap between Top-1 and Top-3 retrieval scores (Margin = s1 - s3) measures the model's confidence in identifying a singular relevant passage rather than uniformly elevated noise",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 5
+  },
+  {
+    "id": "BM-017",
+    "question": "How does strict grounding in Gemini generation prevent enterprise hallucinations?",
+    "category": "conceptual",
+    "ground_truth": "Strict grounding constrains the model prompt to synthesize answers solely from explicitly provided evidence context at low temperature (0.1) and enforces a refusal fallback when information is insufficient.",
+    "expected_evidence": "Gemini is restricted to synthesizing answers solely from facts explicitly stated in the retrieved evidence. Temperature is constrained to 0.1 to suppress speculative extrapolation",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 6
+  },
+  {
+    "id": "BM-018",
+    "question": "What role does Level-2 caching play in RAG system performance?",
+    "category": "conceptual",
+    "ground_truth": "Level-2 caching stores pre-computed vector embeddings to eliminate redundant neural model forward passes during re-indexing and retrieval.",
+    "expected_evidence": "Level-2 caches pre-computed vector embeddings to eliminate redundant neural model forward passes during re-indexing",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 7
+  },
+  {
+    "id": "BM-019",
+    "question": "Describe how the Grounding Verification score is calculated mathematically.",
+    "category": "conceptual",
+    "ground_truth": "The Grounding Score represents the ratio of supported propositional tokens or claims in the generated response to the total response tokens when matched against the retrieved evidence text.",
+    "expected_evidence": "Grounding Score represents the ratio of supported propositional tokens to total response tokens",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 8
+  },
+  {
+    "id": "BM-020",
+    "question": "What criteria trigger unanswerable query classification according to Section 9?",
+    "category": "conceptual",
+    "ground_truth": "A query is classified as unanswerable when either all five embedding models report Top-1 normalized relevance scores below 0.28, or the dynamic selection module finds zero intersecting technical entities in the retrieved evidence.",
+    "expected_evidence": "classified as unanswerable when either: (1) all five embedding models report Top-1 normalized relevance scores below the noise ceiling threshold (0.28), or (2) the dynamic model selection module determines that retrieved evidence contains zero intersecting technical entities",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 9
+  },
+  {
+    "id": "BM-021",
+    "question": "Why is audit logging with SHA-256 integrity hashes required in enterprise governance?",
+    "category": "conceptual",
+    "ground_truth": "Audit logging with SHA-256 integrity hashes ensures tamper-evident traceability of transactions, model selection decisions, and generated answers to satisfy ISO 27001 and SOC 2 Type II compliance.",
+    "expected_evidence": "recorded in an append-only JSON audit log retaining SHA-256 integrity hashes for compliance with ISO 27001 and SOC 2 Type II standards",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 10
+  },
+  {
+    "id": "BM-022",
+    "question": "Explain the trade-off between FlatIP exact vector search and HNSW graph indexing.",
+    "category": "conceptual",
+    "ground_truth": "IndexFlatIP provides 100% exact retrieval recall with zero index build overhead but scales linearly with document count; HNSW constructs graph structures that maintain sub-15ms search latency on massive datasets (>500k vectors) with minor recall degradation (<1.2%).",
+    "expected_evidence": "For high-scale collections exceeding 500,000 vectors, HNSW graph topology with M=32 links per node and efConstruction=64 is deployed to maintain sub-15ms retrieval latency with recall degradation under 1.2%",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 4
+  },
+  {
+    "id": "BM-023",
+    "question": "Compare the dimensional sizes of BGE-M3, Nomic Embed Text v1.5, and MiniLM.",
+    "category": "comparison",
+    "ground_truth": "BGE-M3 is 1024-dimensional, Nomic Embed Text v1.5 is 768-dimensional, and MiniLM is 384-dimensional.",
+    "expected_evidence": "BGE-M3: 1024-dimensional... MiniLM: 384-dimensional... Nomic Embed Text v1.5: 768-dimensional",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 2
+  },
+  {
+    "id": "BM-024",
+    "question": "Compare the latency SLAs between MiniLM and Multilingual-E5-large.",
+    "category": "comparison",
+    "ground_truth": "MiniLM has a latency budget of <= 12 ms (typical 7.4 ms), whereas Multilingual-E5-large has a latency budget of <= 55 ms (typical 44.2 ms).",
+    "expected_evidence": "MiniLM <= 12 ms... E5-large <= 55 ms",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 7
+  },
+  {
+    "id": "BM-025",
+    "question": "How do the prefixing requirements differ between BGE-large-en-v1.5 and Nomic Embed Text v1.5?",
+    "category": "comparison",
+    "ground_truth": "BGE-large-en-v1.5 uses the instruction 'Represent this sentence for searching relevant passages: ' for queries with no doc prefix, while Nomic uses 'search_query: ' and 'search_document: ' prefixes.",
+    "expected_evidence": "BGE-large-en-v1.5: query instruction 'Represent this sentence for searching relevant passages: '... Nomic Embed Text v1.5: prefix tags 'search_query: ' and 'search_document: '",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 2
+  },
+  {
+    "id": "BM-026",
+    "question": "Compare the context window token limits of BGE-M3 versus Multilingual-E5-large.",
+    "category": "comparison",
+    "ground_truth": "BGE-M3 supports an 8,192-token context window, whereas Multilingual-E5-large supports up to 512 tokens.",
+    "expected_evidence": "BGE-M3: long-context technical queries up to 8,192 tokens... Multilingual-E5-large: 1024-dimensional model",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 2
+  },
+  {
+    "id": "BM-027",
+    "question": "Compare the permissions granted to the Analyst tier versus the Viewer tier in RBAC.",
+    "category": "comparison",
+    "ground_truth": "Viewers are only permitted to submit queries and inspect grounded answers with citations, whereas Analysts are additionally granted permission to view model comparison telemetry, latency distributions, and similarity curves.",
+    "expected_evidence": "Viewer: Permitted to submit queries and inspect grounded answers with citations. Analyst: Granted permission to view model comparison telemetry, latency distributions, and similarity curves",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 10
+  },
+  {
+    "id": "BM-028",
+    "question": "How does the Grounding Verification threshold distinguish Supported from Unsupported answers?",
+    "category": "comparison",
+    "ground_truth": "Supported answers require a Grounding Score >= 0.70, whereas Unsupported answers have a Grounding Score < 0.35 (scores between 0.35 and 0.70 are categorized as Partially Supported).",
+    "expected_evidence": "Supported (Score >= 0.70)... Partially Supported (0.35 <= Score < 0.70)... Unsupported (Score < 0.35)",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 8
+  },
+  {
+    "id": "BM-029",
+    "question": "Compare the typical score distributions of Multilingual-E5-large and BGE-large-en-v1.5.",
+    "category": "comparison",
+    "ground_truth": "Multilingual-E5-large exhibits an elevated score distribution typically between 0.78 and 0.96 with mean 0.84, while BGE-large-en-v1.5 operates in a lower, broader distribution (mean ~0.70).",
+    "expected_evidence": "Multilingual-E5-large: typically ranging between 0.78 and 0.96... elevated baseline cosine distribution (mean 0.84)",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 2
+  },
+  {
+    "id": "BM-030",
+    "question": "Compare Level-1 local memory caching with Level-2 embedding caching.",
+    "category": "comparison",
+    "ground_truth": "Level-1 caches document page extractions and segmented chunks in local memory, while Level-2 caches pre-computed vector embeddings to bypass neural forward passes.",
+    "expected_evidence": "Level-1 caches document page extractions and segmented chunks in local memory, while Level-2 caches pre-computed vector embeddings",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 7
+  },
+  {
+    "id": "BM-031",
+    "question": "How do BGE-M3 and BGE-large-en-v1.5 differ in architectural focus and language support?",
+    "category": "comparison",
+    "ground_truth": "BGE-M3 is focused on multilingual and multi-vector (dense, sparse, multi-vec) retrieval with 8k tokens, whereas BGE-large-en-v1.5 is an English-specialized dense model focused on factual precision.",
+    "expected_evidence": "BGE-M3: multi-vector lexical and sparse capabilities, optimized for multilingual... BGE-large-en-v1.5: English-specialized model utilizing the query instruction",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 2
+  },
+  {
+    "id": "BM-032",
+    "question": "How does the ingestion chunking strategy on Page 3 feed into the FAISS indexing topology described on Page 4?",
+    "category": "multi-hop",
+    "ground_truth": "The sliding-window chunking strategy splits document text into 250-word chunks with 50-word overlap while preserving sentence boundaries and metadata; these chunks are then L2-normalized and inserted into FAISS IndexFlatIP partitions or HNSW graphs for inner-product cosine search.",
+    "expected_evidence": "dynamic sliding-window strategy... 250 words... 50 words... embedded vectors undergo L2-normalization prior to index insertion... IndexFlatIP",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 4
+  },
+  {
+    "id": "BM-033",
+    "question": "Connecting Page 2 and Page 5, how does the score range of Multilingual-E5-large motivate the three-factor dynamic model selection policy?",
+    "category": "multi-hop",
+    "ground_truth": "Because Page 2 documents E5's compressed high-cosine range (0.78 to 0.96, mean 0.84), naive comparison would cause E5 to always win; Page 5 resolves this by introducing Z-score normalization, discriminative margin (s1 - s3), and query alignment.",
+    "expected_evidence": "typically ranging between 0.78 and 0.96... elevated baseline cosine distribution (mean 0.84)... three-factor calibrated selection function: 1. Calibrated Z-Score Normalization... 2. Discriminative Confidence Margin... 3. Query Topology Alignment",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 5
+  },
+  {
+    "id": "BM-034",
+    "question": "Tracing from Page 5 to Page 6, how does evidence selected by dynamic model selection get processed by Gemini to ensure groundedness?",
+    "category": "multi-hop",
+    "ground_truth": "The dynamic model selection picks the highest composite-scoring model's chunks as evidence; these chunks are formatted into an immutable citation context block passed to Gemini with a temperature of 0.1 and strict prompt guardrails.",
+    "expected_evidence": "Selected evidence retrieved by the dynamic model selection module is formatted into an immutable citation context block and supplied to the Google Gemini model... temperature is constrained to 0.1",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 6
+  },
+  {
+    "id": "BM-035",
+    "question": "How do the retrieval latency budgets on Page 7 relate to the end-to-end P95 SLA when executing dynamic selection and Gemini generation?",
+    "category": "multi-hop",
+    "ground_truth": "Individual model latencies are capped between 12 ms and 55 ms and dynamic selection overhead is capped at 8 ms, leaving the remainder of the 1,800 ms P95 budget for Gemini generation and network round-trips.",
+    "expected_evidence": "End-to-end RAG response latency must remain under 1,800 ms at the 95th percentile (P95)... Dynamic selection evaluation overhead must not exceed 8 ms",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 7
+  },
+  {
+    "id": "BM-036",
+    "question": "Connecting Page 8 and Page 9, how does the factuality verification engine handle responses to unanswerable queries?",
+    "category": "multi-hop",
+    "ground_truth": "When an unanswerable query triggers refusal, Gemini produces the explicit refusal statement; the factuality verification engine recognizes this compliant refusal as 100% supported (score 1.0) and records it as a successful unanswerable detection rather than a false answer.",
+    "expected_evidence": "Grounding Score represents the ratio... unanswerable benchmark questions, the system must not fabricate... explicit statement confirming that the requested topic is not contained",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 9
+  },
+  {
+    "id": "BM-037",
+    "question": "Tracing Page 1 to Page 10, how are document page offsets preserved through chunking and recorded for RBAC audit compliance?",
+    "category": "multi-hop",
+    "ground_truth": "The PDF parser on Page 1 retains page boundaries; the chunker on Page 3 encapsulates source filename and page numbers into immutable chunk headers; and Page 10 logs all retrieved chunk IDs and selection rationale into append-only SHA-256 audit logs.",
+    "expected_evidence": "retaining rigorous page boundary offsets... chunk header immutably encapsulates its origin source filename, integer page number... recorded in an append-only JSON audit log retaining SHA-256",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 10
+  },
+  {
+    "id": "BM-038",
+    "question": "How does the HNSW indexing configuration on Page 4 support the sub-50ms retrieval SLAs mandated on Page 7?",
+    "category": "multi-hop",
+    "ground_truth": "On Page 4, HNSW uses M=32 links and efConstruction=64 to achieve sub-15ms search latency on collections over 500k vectors, comfortably operating within the 12-55ms individual model latency limits on Page 7.",
+    "expected_evidence": "HNSW graph topology with M=32 links per node and efConstruction=64 is deployed to maintain sub-15ms retrieval latency... MiniLM <= 12 ms... E5-large <= 55 ms",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 4
+  },
+  {
+    "id": "BM-039",
+    "question": "How do the embedding models on Page 2 and dynamic selection on Page 5 ensure queries with technical entity overlap are distinguished from unanswerable queries on Page 9?",
+    "category": "multi-hop",
+    "ground_truth": "The five specialized models generate domain embeddings whose Top-1 normalized relevance is evaluated on Page 5; if normalized relevance drops below 0.28 or entity overlap is zero, Page 9 triggers unanswerable refusal.",
+    "expected_evidence": "normalized relevance scores below the noise ceiling threshold (0.28), or (2) the dynamic model selection module determines that retrieved evidence contains zero intersecting technical entities",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 9
+  },
+  {
+    "id": "BM-040",
+    "question": "Summarize the architectural principles and operational workflow of the document intelligence platform.",
+    "category": "summarization",
+    "ground_truth": "The platform orchestrates end-to-end RAG across four stages: PDF extraction with page preservation, 250-word sliding-window chunking, parallel embedding generation across five specialized models, and L2-normalized FAISS retrieval. Evidence is dynamically selected using calibrated Z-scores and confidence margins, then synthesized by Gemini at 0.1 temperature with automated grounding verification and RBAC audit logging.",
+    "expected_evidence": "four linear stages: (1) Document Ingestion and PDF Parsing, (2) Semantic Sliding-Window Chunking, (3) Multi-Model Embedding Generation... (4) FAISS Vector Indexing... Dynamic Embedding Model Selection... Google Gemini... Grounding Verification",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 1
+  },
+  {
+    "id": "BM-041",
+    "question": "Summarize the five embedding models used in the system and their respective strengths.",
+    "category": "summarization",
+    "ground_truth": "The system utilizes: (1) BGE-M3 for multilingual and 8k long-context queries, (2) Multilingual-E5-large for high-density multilingual retrieval with query/passage prefixes, (3) BGE-large-en-v1.5 for English factual precision, (4) MiniLM for ultra-fast 7.4ms edge inference, and (5) Nomic Embed Text v1.5 for flexible 8k Matryoshka dimension scaling.",
+    "expected_evidence": "BGE-M3... Multilingual-E5-large... BGE-large-en-v1.5... MiniLM... Nomic Embed Text v1.5",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 2
+  },
+  {
+    "id": "BM-042",
+    "question": "Summarize the three factors in the dynamic model selection formula and how they resolve model bias.",
+    "category": "summarization",
+    "ground_truth": "Dynamic model selection resolves the elevated baseline bias of models like E5 by combining: (1) Calibrated Z-Score Normalization to equalize empirical distributions, (2) Discriminative Confidence Margin (s1 - s3) to reward sharp passage separation, and (3) Query Topology Alignment bonuses tailored to query complexity and language.",
+    "expected_evidence": "three-factor calibrated selection function: 1. Calibrated Z-Score Normalization... 2. Discriminative Confidence Margin... 3. Query Topology Alignment",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 5
+  },
+  {
+    "id": "BM-043",
+    "question": "Summarize the latency and caching governance standards across the RAG system.",
+    "category": "summarization",
+    "ground_truth": "The system enforces an end-to-end P95 response latency under 1,800 ms with per-model retrieval budgets between 12 ms and 55 ms and 8 ms selection overhead. Two caching tiers (Level-1 in-memory chunks, Level-2 vector embeddings) prevent redundant processing.",
+    "expected_evidence": "End-to-end RAG response latency must remain under 1,800 ms at the 95th percentile (P95)... Level-1 caches document page extractions... Level-2 caches pre-computed vector embeddings",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 7
+  },
+  {
+    "id": "BM-044",
+    "question": "Summarize the grounding verification tiers and their operational consequences.",
+    "category": "summarization",
+    "ground_truth": "Answers are categorized into three tiers based on token containment: Supported (>= 0.70) displays green citation badges, Partially Supported (0.35 - 0.70) displays user warning pills for minor extrapolation, and Unsupported (< 0.35) triggers hallucination flags for audit.",
+    "expected_evidence": "Supported (Score >= 0.70)... Partially Supported (0.35 <= Score < 0.70)... Unsupported (Score < 0.35): Hallucination flag triggered; output is suppressed or flagged for human audit",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 8
+  },
+  {
+    "id": "BM-045",
+    "question": "Summarize the enterprise security and compliance controls mandated in Section 10.",
+    "category": "summarization",
+    "ground_truth": "Section 10 enforces three-tier Role-Based Access Control (Viewer, Analyst, Administrator) and immutable append-only JSON transaction logging with SHA-256 integrity hashes to satisfy ISO 27001 and SOC 2 Type II compliance.",
+    "expected_evidence": "Role-Based Access Control (RBAC)... Viewer... Analyst... Administrator... append-only JSON audit log retaining SHA-256 integrity hashes for compliance with ISO 27001 and SOC 2 Type II standards",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": 10
+  },
+  {
+    "id": "BM-046",
+    "question": "What is the quantum decoherence threshold specified for superconducting qubits in cryogenic environments?",
+    "category": "unanswerable",
+    "ground_truth": "The provided document does not contain information to answer this question regarding quantum decoherence or superconducting qubits.",
+    "expected_evidence": "",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": null
+  },
+  {
+    "id": "BM-047",
+    "question": "Who won the 1986 FIFA World Cup final and what was the final score?",
+    "category": "unanswerable",
+    "ground_truth": "The provided document does not contain information to answer this question regarding the 1986 FIFA World Cup.",
+    "expected_evidence": "",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": null
+  },
+  {
+    "id": "BM-048",
+    "question": "What is the exact chemical recipe and temperature schedule for baking sourdough bread?",
+    "category": "unanswerable",
+    "ground_truth": "The provided document does not contain information to answer this question regarding baking sourdough bread recipes.",
+    "expected_evidence": "",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": null
+  },
+  {
+    "id": "BM-049",
+    "question": "What are the Mars rover Curiosity's daily solar panel power generation metrics?",
+    "category": "unanswerable",
+    "ground_truth": "The provided document does not contain information to answer this question regarding Mars rover Curiosity power metrics.",
+    "expected_evidence": "",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": null
+  },
+  {
+    "id": "BM-050",
+    "question": "What was the treaty signed in 1845 between the Kingdom of Prussia and the Austrian Empire?",
+    "category": "unanswerable",
+    "ground_truth": "The provided document does not contain information to answer this question regarding European historical treaties of 1845.",
+    "expected_evidence": "",
+    "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+    "page": null
+  }
+]

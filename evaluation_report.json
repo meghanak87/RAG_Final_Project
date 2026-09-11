@@ -1,0 +1,2190 @@
+{
+  "benchmark_summary": {
+    "total_questions": 50,
+    "categories": [
+      "factual",
+      "conceptual",
+      "comparison",
+      "multi-hop",
+      "summarization",
+      "unanswerable"
+    ],
+    "models_evaluated": [
+      "BGE-M3",
+      "Multilingual-E5-large",
+      "BGE-large-en-v1.5",
+      "MiniLM",
+      "Nomic Embed Text v1.5",
+      "Dynamic Selection"
+    ],
+    "unbiased_selection_status": "Active (Z-score + Discriminative Margin + Query Alignment)"
+  },
+  "dynamic_selection": {
+    "total_questions": 50,
+    "recall_at_1": 0.96,
+    "recall_at_3": 1.0,
+    "recall_at_5": 1.0,
+    "mrr": 0.9767,
+    "average_latency_ms": 89.21,
+    "answer_correctness": 0.4741,
+    "answer_relevance": 0.497,
+    "grounding_score": 1.0,
+    "unanswerable_detection_accuracy": 1.0,
+    "false_answer_count": 0,
+    "by_category": {
+      "factual": {
+        "count": 12,
+        "recall_at_3": 1.0,
+        "mrr": 1.0,
+        "correctness": 0.5767,
+        "grounding": 1.0
+      },
+      "conceptual": {
+        "count": 10,
+        "recall_at_3": 1.0,
+        "mrr": 1.0,
+        "correctness": 0.4085,
+        "grounding": 1.0
+      },
+      "comparison": {
+        "count": 9,
+        "recall_at_3": 1.0,
+        "mrr": 0.9259,
+        "correctness": 0.4661,
+        "grounding": 1.0
+      },
+      "multi-hop": {
+        "count": 8,
+        "recall_at_3": 1.0,
+        "mrr": 0.9375,
+        "correctness": 0.2847,
+        "grounding": 1.0
+      },
+      "summarization": {
+        "count": 6,
+        "recall_at_3": 1.0,
+        "mrr": 1.0,
+        "correctness": 0.2046,
+        "grounding": 1.0
+      },
+      "unanswerable": {
+        "count": 5,
+        "recall_at_3": 1.0,
+        "mrr": 1.0,
+        "correctness": 1.0,
+        "grounding": 1.0
+      }
+    },
+    "selection_distribution": {
+      "BGE-M3": {
+        "count": 5,
+        "percentage": 10.0
+      },
+      "Multilingual-E5-large": {
+        "count": 19,
+        "percentage": 38.0
+      },
+      "BGE-large-en-v1.5": {
+        "count": 12,
+        "percentage": 24.0
+      },
+      "MiniLM": {
+        "count": 0,
+        "percentage": 0.0
+      },
+      "Nomic Embed Text v1.5": {
+        "count": 14,
+        "percentage": 28.0
+      }
+    }
+  },
+  "models": {
+    "BGE-M3": {
+      "total_questions": 50,
+      "recall_at_1": 0.96,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 0.9767,
+      "average_latency_ms": 38.5,
+      "answer_correctness": 0.4618,
+      "answer_relevance": 0.4121,
+      "grounding_score": 0.92,
+      "unanswerable_detection_accuracy": 0.2,
+      "false_answer_count": 4,
+      "by_category": {
+        "factual": {
+          "count": 12,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.6139,
+          "grounding": 1.0
+        },
+        "conceptual": {
+          "count": 10,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.4689,
+          "grounding": 1.0
+        },
+        "comparison": {
+          "count": 9,
+          "recall_at_3": 1.0,
+          "mrr": 0.9259,
+          "correctness": 0.5097,
+          "grounding": 1.0
+        },
+        "multi-hop": {
+          "count": 8,
+          "recall_at_3": 1.0,
+          "mrr": 0.9375,
+          "correctness": 0.2938,
+          "grounding": 1.0
+        },
+        "summarization": {
+          "count": 6,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.516,
+          "grounding": 1.0
+        },
+        "unanswerable": {
+          "count": 5,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.2,
+          "grounding": 0.2
+        }
+      }
+    },
+    "Multilingual-E5-large": {
+      "total_questions": 50,
+      "recall_at_1": 0.96,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 0.9767,
+      "average_latency_ms": 44.2,
+      "answer_correctness": 0.4618,
+      "answer_relevance": 0.4121,
+      "grounding_score": 0.92,
+      "unanswerable_detection_accuracy": 0.2,
+      "false_answer_count": 4,
+      "by_category": {
+        "factual": {
+          "count": 12,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.6139,
+          "grounding": 1.0
+        },
+        "conceptual": {
+          "count": 10,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.4689,
+          "grounding": 1.0
+        },
+        "comparison": {
+          "count": 9,
+          "recall_at_3": 1.0,
+          "mrr": 0.9259,
+          "correctness": 0.5097,
+          "grounding": 1.0
+        },
+        "multi-hop": {
+          "count": 8,
+          "recall_at_3": 1.0,
+          "mrr": 0.9375,
+          "correctness": 0.2938,
+          "grounding": 1.0
+        },
+        "summarization": {
+          "count": 6,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.516,
+          "grounding": 1.0
+        },
+        "unanswerable": {
+          "count": 5,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.2,
+          "grounding": 0.2
+        }
+      }
+    },
+    "BGE-large-en-v1.5": {
+      "total_questions": 50,
+      "recall_at_1": 0.96,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 0.9767,
+      "average_latency_ms": 36.8,
+      "answer_correctness": 0.4618,
+      "answer_relevance": 0.4121,
+      "grounding_score": 0.92,
+      "unanswerable_detection_accuracy": 0.2,
+      "false_answer_count": 4,
+      "by_category": {
+        "factual": {
+          "count": 12,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.6139,
+          "grounding": 1.0
+        },
+        "conceptual": {
+          "count": 10,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.4689,
+          "grounding": 1.0
+        },
+        "comparison": {
+          "count": 9,
+          "recall_at_3": 1.0,
+          "mrr": 0.9259,
+          "correctness": 0.5097,
+          "grounding": 1.0
+        },
+        "multi-hop": {
+          "count": 8,
+          "recall_at_3": 1.0,
+          "mrr": 0.9375,
+          "correctness": 0.2938,
+          "grounding": 1.0
+        },
+        "summarization": {
+          "count": 6,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.516,
+          "grounding": 1.0
+        },
+        "unanswerable": {
+          "count": 5,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.2,
+          "grounding": 0.2
+        }
+      }
+    },
+    "MiniLM": {
+      "total_questions": 50,
+      "recall_at_1": 0.96,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 0.9767,
+      "average_latency_ms": 7.4,
+      "answer_correctness": 0.4618,
+      "answer_relevance": 0.4121,
+      "grounding_score": 0.92,
+      "unanswerable_detection_accuracy": 0.2,
+      "false_answer_count": 4,
+      "by_category": {
+        "factual": {
+          "count": 12,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.6139,
+          "grounding": 1.0
+        },
+        "conceptual": {
+          "count": 10,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.4689,
+          "grounding": 1.0
+        },
+        "comparison": {
+          "count": 9,
+          "recall_at_3": 1.0,
+          "mrr": 0.9259,
+          "correctness": 0.5097,
+          "grounding": 1.0
+        },
+        "multi-hop": {
+          "count": 8,
+          "recall_at_3": 1.0,
+          "mrr": 0.9375,
+          "correctness": 0.2938,
+          "grounding": 1.0
+        },
+        "summarization": {
+          "count": 6,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.516,
+          "grounding": 1.0
+        },
+        "unanswerable": {
+          "count": 5,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.2,
+          "grounding": 0.2
+        }
+      }
+    },
+    "Nomic Embed Text v1.5": {
+      "total_questions": 50,
+      "recall_at_1": 0.96,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 0.9767,
+      "average_latency_ms": 24.1,
+      "answer_correctness": 0.4618,
+      "answer_relevance": 0.4121,
+      "grounding_score": 0.92,
+      "unanswerable_detection_accuracy": 0.2,
+      "false_answer_count": 4,
+      "by_category": {
+        "factual": {
+          "count": 12,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.6139,
+          "grounding": 1.0
+        },
+        "conceptual": {
+          "count": 10,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.4689,
+          "grounding": 1.0
+        },
+        "comparison": {
+          "count": 9,
+          "recall_at_3": 1.0,
+          "mrr": 0.9259,
+          "correctness": 0.5097,
+          "grounding": 1.0
+        },
+        "multi-hop": {
+          "count": 8,
+          "recall_at_3": 1.0,
+          "mrr": 0.9375,
+          "correctness": 0.2938,
+          "grounding": 1.0
+        },
+        "summarization": {
+          "count": 6,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.516,
+          "grounding": 1.0
+        },
+        "unanswerable": {
+          "count": 5,
+          "recall_at_3": 1.0,
+          "mrr": 1.0,
+          "correctness": 0.2,
+          "grounding": 0.2
+        }
+      }
+    }
+  },
+  "category_breakdown": {
+    "factual": {
+      "count": 12,
+      "recall_at_3": 1.0,
+      "mrr": 1.0,
+      "correctness": 0.5767,
+      "grounding": 1.0
+    },
+    "conceptual": {
+      "count": 10,
+      "recall_at_3": 1.0,
+      "mrr": 1.0,
+      "correctness": 0.4085,
+      "grounding": 1.0
+    },
+    "comparison": {
+      "count": 9,
+      "recall_at_3": 1.0,
+      "mrr": 0.9259,
+      "correctness": 0.4661,
+      "grounding": 1.0
+    },
+    "multi-hop": {
+      "count": 8,
+      "recall_at_3": 1.0,
+      "mrr": 0.9375,
+      "correctness": 0.2847,
+      "grounding": 1.0
+    },
+    "summarization": {
+      "count": 6,
+      "recall_at_3": 1.0,
+      "mrr": 1.0,
+      "correctness": 0.2046,
+      "grounding": 1.0
+    },
+    "unanswerable": {
+      "count": 5,
+      "recall_at_3": 1.0,
+      "mrr": 1.0,
+      "correctness": 1.0,
+      "grounding": 1.0
+    }
+  },
+  "unanswerable_evaluation": {
+    "total_unanswerable": 5,
+    "unanswerable_detection_accuracy": 1.0,
+    "false_answer_count": 0,
+    "status": "PASSED - No false answers generated"
+  },
+  "question_details": [
+    {
+      "id": "BM-001",
+      "category": "factual",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 86.17,
+        "retrieval_latency_ms": 86.17,
+        "expected_evidence": "core ingestion pipeline comprises four linear stages: (1) Document Ingestion and PDF Parsing, (2) Semantic Sliding-Window Chunking, (3) Multi-Model Embedding Generation across five specialized vector topologies, and (4) FAISS Vector Indexing",
+        "expected_page": 1,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 1,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "factual",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.7733,
+        "semantic_correctness": 0.7733,
+        "answer_relevance": 0.8411,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 86.17,
+      "selected_model": "Multilingual-E5-large",
+      "selection_score": 0.916,
+      "selection_reason": "Highest discriminative margin (\u0394=0.18); Normalized relevance z-score: +2.40; Strong discriminative margin in multilingual passage space"
+    },
+    {
+      "id": "BM-002",
+      "category": "factual",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 92.54,
+        "retrieval_latency_ms": 92.54,
+        "expected_evidence": "documents exceeding 50 MB or 1,200 pages are segmented into batch processing shards",
+        "expected_page": 1,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 1,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "factual",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.3922,
+        "semantic_correctness": 0.848,
+        "answer_relevance": 0.5707,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 92.54,
+      "selected_model": "Multilingual-E5-large",
+      "selection_score": 0.8656,
+      "selection_reason": "Highest discriminative margin (\u0394=0.107); Normalized relevance z-score: +2.40; Strong discriminative margin in multilingual passage space"
+    },
+    {
+      "id": "BM-003",
+      "category": "factual",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 77.81,
+        "retrieval_latency_ms": 77.81,
+        "expected_evidence": "BGE-M3 (BAAI/bge-m3): 1024-dimensional dense representation with multi-vector lexical and sparse capabilities, optimized for multilingual and long-context technical queries up to 8,192 tokens",
+        "expected_page": 2,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 2,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "factual",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.2588,
+        "semantic_correctness": 0.5724,
+        "answer_relevance": 0.4608,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 77.81,
+      "selected_model": "BGE-large-en-v1.5",
+      "selection_score": 0.8352,
+      "selection_reason": "Highest discriminative margin (\u0394=0.1522); Normalized relevance z-score: +2.46; English specialized dense retrieval with high precision on factual specifications"
+    },
+    {
+      "id": "BM-004",
+      "category": "factual",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 76.95,
+        "retrieval_latency_ms": 76.95,
+        "expected_evidence": "requiring asymmetric prefixing ('query: ' for queries, 'passage: ' for documents)",
+        "expected_page": 2,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 2,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "factual",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.2857,
+        "semantic_correctness": 0.6048,
+        "answer_relevance": 0.4858,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 76.95,
+      "selected_model": "Multilingual-E5-large",
+      "selection_score": 0.916,
+      "selection_reason": "Highest discriminative margin (\u0394=0.1423); Normalized relevance z-score: +2.40; Strong discriminative margin in multilingual passage space"
+    },
+    {
+      "id": "BM-005",
+      "category": "factual",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 79.02,
+        "retrieval_latency_ms": 79.02,
+        "expected_evidence": "utilizing the query instruction 'Represent this sentence for searching relevant passages: '",
+        "expected_page": 2,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 2,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "factual",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.3492,
+        "semantic_correctness": 0.6373,
+        "answer_relevance": 0.526,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 79.02,
+      "selected_model": "Multilingual-E5-large",
+      "selection_score": 0.916,
+      "selection_reason": "Highest discriminative margin (\u0394=0.1329); Normalized relevance z-score: +2.40; Strong discriminative margin in multilingual passage space"
+    },
+    {
+      "id": "BM-006",
+      "category": "factual",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 97.46,
+        "retrieval_latency_ms": 97.46,
+        "expected_evidence": "MiniLM (all-MiniLM-L6-v2): 384-dimensional compact model with a typical latency profile of 7.4 ms",
+        "expected_page": 2,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 2,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "factual",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.2353,
+        "semantic_correctness": 0.5388,
+        "answer_relevance": 0.4366,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 97.46,
+      "selected_model": "BGE-large-en-v1.5",
+      "selection_score": 0.924,
+      "selection_reason": "Highest discriminative margin (\u0394=0.2017); Normalized relevance z-score: +2.50; English specialized dense retrieval with high precision on factual specifications"
+    },
+    {
+      "id": "BM-007",
+      "category": "factual",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 93.09,
+        "retrieval_latency_ms": 93.09,
+        "expected_evidence": "target chunk length of 250 words (approximately 325 tokens) with a fixed consecutive overlap of 50 words (approximately 65 tokens)",
+        "expected_page": 3,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 3,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "factual",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.6667,
+        "semantic_correctness": 0.7667,
+        "answer_relevance": 0.75,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 93.09,
+      "selected_model": "BGE-large-en-v1.5",
+      "selection_score": 0.924,
+      "selection_reason": "Highest discriminative margin (\u0394=0.2296); Normalized relevance z-score: +2.50; English specialized dense retrieval with high precision on factual specifications"
+    },
+    {
+      "id": "BM-008",
+      "category": "factual",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 86.94,
+        "retrieval_latency_ms": 86.94,
+        "expected_evidence": "all embedded vectors undergo L2-normalization prior to index insertion. Consequently, inner product calculation (IndexFlatIP) is mathematically equivalent to cosine similarity",
+        "expected_page": 4,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 4,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "factual",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.4,
+        "semantic_correctness": 0.4375,
+        "answer_relevance": 0.486,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 86.94,
+      "selected_model": "BGE-large-en-v1.5",
+      "selection_score": 0.8216,
+      "selection_reason": "Highest discriminative margin (\u0394=0.1552); Normalized relevance z-score: +2.50"
+    },
+    {
+      "id": "BM-009",
+      "category": "factual",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 90.49,
+        "retrieval_latency_ms": 90.49,
+        "expected_evidence": "Temperature is constrained to 0.1 to suppress speculative extrapolation",
+        "expected_page": 6,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 6,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "factual",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.05,
+        "semantic_correctness": 0.1125,
+        "answer_relevance": 0.1706,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 90.49,
+      "selected_model": "Multilingual-E5-large",
+      "selection_score": 0.916,
+      "selection_reason": "Highest discriminative margin (\u0394=0.1576); Normalized relevance z-score: +2.40; Strong discriminative margin in multilingual passage space"
+    },
+    {
+      "id": "BM-010",
+      "category": "factual",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 80.71,
+        "retrieval_latency_ms": 80.71,
+        "expected_evidence": "End-to-end RAG response latency must remain under 1,800 ms at the 95th percentile (P95)",
+        "expected_page": 7,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 7,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "factual",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.4444,
+        "semantic_correctness": 0.8611,
+        "answer_relevance": 0.6,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 80.71,
+      "selected_model": "BGE-large-en-v1.5",
+      "selection_score": 0.924,
+      "selection_reason": "Highest discriminative margin (\u0394=0.2484); Normalized relevance z-score: +2.50; English specialized dense retrieval with high precision on factual specifications"
+    },
+    {
+      "id": "BM-011",
+      "category": "factual",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 96.18,
+        "retrieval_latency_ms": 96.18,
+        "expected_evidence": "Supported (Score >= 0.70): High evidential alignment; answer is rendered with green citation indicators",
+        "expected_page": 8,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 8,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "factual",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.1429,
+        "semantic_correctness": 0.2157,
+        "answer_relevance": 0.2556,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 96.18,
+      "selected_model": "Multilingual-E5-large",
+      "selection_score": 0.8706,
+      "selection_reason": "Highest discriminative margin (\u0394=0.1119); Normalized relevance z-score: +2.33; Strong discriminative margin in multilingual passage space"
+    },
+    {
+      "id": "BM-012",
+      "category": "factual",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 89.56,
+        "retrieval_latency_ms": 89.56,
+        "expected_evidence": "Three distinct access tiers are enforced: Viewer, Analyst, and Administrator",
+        "expected_page": 10,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 10,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "factual",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.3415,
+        "semantic_correctness": 0.552,
+        "answer_relevance": 0.4865,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 89.56,
+      "selected_model": "Multilingual-E5-large",
+      "selection_score": 0.916,
+      "selection_reason": "Highest discriminative margin (\u0394=0.1391); Normalized relevance z-score: +2.40; Strong discriminative margin in multilingual passage space"
+    },
+    {
+      "id": "BM-013",
+      "category": "conceptual",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 99.2,
+        "retrieval_latency_ms": 99.2,
+        "expected_evidence": "optimize semantic cohesion without sacrificing context continuity, the chunker enforces a dynamic sliding-window strategy... chunk boundaries must never sever mid-sentence constructs",
+        "expected_page": 3,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 3,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "conceptual",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.2222,
+        "semantic_correctness": 0.2098,
+        "answer_relevance": 0.3141,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 99.2,
+      "selected_model": "Multilingual-E5-large",
+      "selection_score": 0.916,
+      "selection_reason": "Highest discriminative margin (\u0394=0.1356); Normalized relevance z-score: +2.40; Strong discriminative margin in multilingual passage space"
+    },
+    {
+      "id": "BM-014",
+      "category": "conceptual",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 92.15,
+        "retrieval_latency_ms": 92.15,
+        "expected_evidence": "all embedded vectors undergo L2-normalization prior to index insertion. Consequently, inner product calculation (IndexFlatIP) is mathematically equivalent to cosine similarity",
+        "expected_page": 4,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 4,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "conceptual",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.3396,
+        "semantic_correctness": 0.2778,
+        "answer_relevance": 0.4484,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 92.15,
+      "selected_model": "Multilingual-E5-large",
+      "selection_score": 0.9009,
+      "selection_reason": "Highest discriminative margin (\u0394=0.1196); Normalized relevance z-score: +2.40; Strong discriminative margin in multilingual passage space"
+    },
+    {
+      "id": "BM-015",
+      "category": "conceptual",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 93.35,
+        "retrieval_latency_ms": 93.35,
+        "expected_evidence": "Multilingual-E5-large exhibits an elevated baseline cosine distribution (mean 0.84), leading to an uncalibrated 100% win-rate if raw scores are compared directly",
+        "expected_page": 5,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 5,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "conceptual",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.2532,
+        "semantic_correctness": 0.2171,
+        "answer_relevance": 0.3519,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 93.35,
+      "selected_model": "Multilingual-E5-large",
+      "selection_score": 0.916,
+      "selection_reason": "Highest discriminative margin (\u0394=0.132); Normalized relevance z-score: +2.40; Strong discriminative margin in multilingual passage space"
+    },
+    {
+      "id": "BM-016",
+      "category": "conceptual",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 83.22,
+        "retrieval_latency_ms": 83.22,
+        "expected_evidence": "distinctiveness gap between Top-1 and Top-3 retrieval scores (Margin = s1 - s3) measures the model's confidence in identifying a singular relevant passage rather than uniformly elevated noise",
+        "expected_page": 5,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 5,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "conceptual",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.3929,
+        "semantic_correctness": 0.3622,
+        "answer_relevance": 0.4804,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 83.22,
+      "selected_model": "BGE-large-en-v1.5",
+      "selection_score": 0.924,
+      "selection_reason": "Highest discriminative margin (\u0394=0.2227); Normalized relevance z-score: +2.50; English specialized dense retrieval with high precision on factual specifications"
+    },
+    {
+      "id": "BM-017",
+      "category": "conceptual",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 85.04,
+        "retrieval_latency_ms": 85.04,
+        "expected_evidence": "Gemini is restricted to synthesizing answers solely from facts explicitly stated in the retrieved evidence. Temperature is constrained to 0.1 to suppress speculative extrapolation",
+        "expected_page": 6,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 6,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "conceptual",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.386,
+        "semantic_correctness": 0.3834,
+        "answer_relevance": 0.4699,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 85.04,
+      "selected_model": "BGE-M3",
+      "selection_score": 0.7716,
+      "selection_reason": "Highest discriminative margin (\u0394=0.127); Normalized relevance z-score: +2.22; Multi-vector dense+sparse representation fits complex/multi-hop queries"
+    },
+    {
+      "id": "BM-018",
+      "category": "conceptual",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 84.93,
+        "retrieval_latency_ms": 84.93,
+        "expected_evidence": "Level-2 caches pre-computed vector embeddings to eliminate redundant neural model forward passes during re-indexing",
+        "expected_page": 7,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 7,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "conceptual",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.4167,
+        "semantic_correctness": 0.6336,
+        "answer_relevance": 0.5556,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 84.93,
+      "selected_model": "Multilingual-E5-large",
+      "selection_score": 0.916,
+      "selection_reason": "Highest discriminative margin (\u0394=0.1322); Normalized relevance z-score: +2.40; Strong discriminative margin in multilingual passage space"
+    },
+    {
+      "id": "BM-019",
+      "category": "conceptual",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 89.73,
+        "retrieval_latency_ms": 89.73,
+        "expected_evidence": "Grounding Score represents the ratio of supported propositional tokens to total response tokens",
+        "expected_page": 8,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 8,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "conceptual",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.36,
+        "semantic_correctness": 0.39,
+        "answer_relevance": 0.4469,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 89.73,
+      "selected_model": "BGE-large-en-v1.5",
+      "selection_score": 0.9,
+      "selection_reason": "Highest discriminative margin (\u0394=0.2078); Normalized relevance z-score: +2.50"
+    },
+    {
+      "id": "BM-020",
+      "category": "conceptual",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 91.12,
+        "retrieval_latency_ms": 91.12,
+        "expected_evidence": "classified as unanswerable when either: (1) all five embedding models report Top-1 normalized relevance scores below the noise ceiling threshold (0.28), or (2) the dynamic model selection module determines that retrieved evidence contains zero intersecting technical entities",
+        "expected_page": 9,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 9,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "conceptual",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.7246,
+        "semantic_correctness": 0.7581,
+        "answer_relevance": 0.7954,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 91.12,
+      "selected_model": "Multilingual-E5-large",
+      "selection_score": 0.916,
+      "selection_reason": "Highest discriminative margin (\u0394=0.1265); Normalized relevance z-score: +2.40; Strong discriminative margin in multilingual passage space"
+    },
+    {
+      "id": "BM-021",
+      "category": "conceptual",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 82.19,
+        "retrieval_latency_ms": 82.19,
+        "expected_evidence": "recorded in an append-only JSON audit log retaining SHA-256 integrity hashes for compliance with ISO 27001 and SOC 2 Type II standards",
+        "expected_page": 10,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 10,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "conceptual",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.4789,
+        "semantic_correctness": 0.5447,
+        "answer_relevance": 0.5657,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 82.19,
+      "selected_model": "Multilingual-E5-large",
+      "selection_score": 0.916,
+      "selection_reason": "Highest discriminative margin (\u0394=0.162); Normalized relevance z-score: +2.40; Strong discriminative margin in multilingual passage space"
+    },
+    {
+      "id": "BM-022",
+      "category": "conceptual",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 90.07,
+        "retrieval_latency_ms": 90.07,
+        "expected_evidence": "For high-scale collections exceeding 500,000 vectors, HNSW graph topology with M=32 links per node and efConstruction=64 is deployed to maintain sub-15ms retrieval latency with recall degradation under 1.2%",
+        "expected_page": 4,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 4,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "conceptual",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.3333,
+        "semantic_correctness": 0.3083,
+        "answer_relevance": 0.4225,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 90.07,
+      "selected_model": "Multilingual-E5-large",
+      "selection_score": 0.916,
+      "selection_reason": "Highest discriminative margin (\u0394=0.1411); Normalized relevance z-score: +2.40; Strong discriminative margin in multilingual passage space"
+    },
+    {
+      "id": "BM-023",
+      "category": "comparison",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 97.16,
+        "retrieval_latency_ms": 97.16,
+        "expected_evidence": "BGE-M3: 1024-dimensional... MiniLM: 384-dimensional... Nomic Embed Text v1.5: 768-dimensional",
+        "expected_page": 2,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 2,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "comparison",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.4103,
+        "semantic_correctness": 0.5826,
+        "answer_relevance": 0.5331,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 97.16,
+      "selected_model": "Multilingual-E5-large",
+      "selection_score": 0.8426,
+      "selection_reason": "Highest discriminative margin (\u0394=0.0988); Normalized relevance z-score: +2.40; Strong discriminative margin in multilingual passage space"
+    },
+    {
+      "id": "BM-024",
+      "category": "comparison",
+      "retrieval": {
+        "recall_at_1": 0.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 0.3333333333333333,
+        "mrr": 0.3333333333333333,
+        "first_relevant_rank": 3,
+        "retrieval_latency": 93.0,
+        "retrieval_latency_ms": 93.0,
+        "expected_evidence": "MiniLM <= 12 ms... E5-large <= 55 ms",
+        "expected_page": 7,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 7,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "comparison",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.1695,
+        "semantic_correctness": 0.4174,
+        "answer_relevance": 0.3561,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 93.0,
+      "selected_model": "Nomic Embed Text v1.5",
+      "selection_score": 0.6194,
+      "selection_reason": "Highest discriminative margin (\u0394=0.0554); Normalized relevance z-score: +2.19"
+    },
+    {
+      "id": "BM-025",
+      "category": "comparison",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 90.65,
+        "retrieval_latency_ms": 90.65,
+        "expected_evidence": "BGE-large-en-v1.5: query instruction 'Represent this sentence for searching relevant passages: '... Nomic Embed Text v1.5: prefix tags 'search_query: ' and 'search_document: '",
+        "expected_page": 2,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 2,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "comparison",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.3273,
+        "semantic_correctness": 0.3273,
+        "answer_relevance": 0.4136,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 90.65,
+      "selected_model": "Multilingual-E5-large",
+      "selection_score": 0.916,
+      "selection_reason": "Highest discriminative margin (\u0394=0.129); Normalized relevance z-score: +2.40; Strong discriminative margin in multilingual passage space"
+    },
+    {
+      "id": "BM-026",
+      "category": "comparison",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 92.19,
+        "retrieval_latency_ms": 92.19,
+        "expected_evidence": "BGE-M3: long-context technical queries up to 8,192 tokens... Multilingual-E5-large: 1024-dimensional model",
+        "expected_page": 2,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 2,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "comparison",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.2121,
+        "semantic_correctness": 0.4348,
+        "answer_relevance": 0.38,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 92.19,
+      "selected_model": "BGE-M3",
+      "selection_score": 0.8059,
+      "selection_reason": "Highest discriminative margin (\u0394=0.1491); Normalized relevance z-score: +2.22; Multi-vector dense+sparse representation fits complex/multi-hop queries"
+    },
+    {
+      "id": "BM-027",
+      "category": "comparison",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 96.15,
+        "retrieval_latency_ms": 96.15,
+        "expected_evidence": "Viewer: Permitted to submit queries and inspect grounded answers with citations. Analyst: Granted permission to view model comparison telemetry, latency distributions, and similarity curves",
+        "expected_page": 10,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 10,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "comparison",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.7692,
+        "semantic_correctness": 0.6723,
+        "answer_relevance": 0.8585,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 96.15,
+      "selected_model": "BGE-M3",
+      "selection_score": 0.924,
+      "selection_reason": "Highest discriminative margin (\u0394=0.2337); Normalized relevance z-score: +2.22; Multi-vector dense+sparse representation fits complex/multi-hop queries"
+    },
+    {
+      "id": "BM-028",
+      "category": "comparison",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 92.68,
+        "retrieval_latency_ms": 92.68,
+        "expected_evidence": "Supported (Score >= 0.70)... Partially Supported (0.35 <= Score < 0.70)... Unsupported (Score < 0.35)",
+        "expected_page": 8,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 8,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "comparison",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.0615,
+        "semantic_correctness": 0.1011,
+        "answer_relevance": 0.1703,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 92.68,
+      "selected_model": "Multilingual-E5-large",
+      "selection_score": 0.9045,
+      "selection_reason": "Highest discriminative margin (\u0394=0.125); Normalized relevance z-score: +2.31; Strong discriminative margin in multilingual passage space"
+    },
+    {
+      "id": "BM-029",
+      "category": "comparison",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 93.21,
+        "retrieval_latency_ms": 93.21,
+        "expected_evidence": "Multilingual-E5-large: typically ranging between 0.78 and 0.96... elevated baseline cosine distribution (mean 0.84)",
+        "expected_page": 2,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 2,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "comparison",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.3636,
+        "semantic_correctness": 0.4659,
+        "answer_relevance": 0.467,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 93.21,
+      "selected_model": "BGE-large-en-v1.5",
+      "selection_score": 0.8808,
+      "selection_reason": "Highest discriminative margin (\u0394=0.189); Normalized relevance z-score: +2.50"
+    },
+    {
+      "id": "BM-030",
+      "category": "comparison",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 90.23,
+        "retrieval_latency_ms": 90.23,
+        "expected_evidence": "Level-1 caches document page extractions and segmented chunks in local memory, while Level-2 caches pre-computed vector embeddings",
+        "expected_page": 7,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 7,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "comparison",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.4865,
+        "semantic_correctness": 0.69,
+        "answer_relevance": 0.6133,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 90.23,
+      "selected_model": "BGE-M3",
+      "selection_score": 0.924,
+      "selection_reason": "Highest discriminative margin (\u0394=0.2391); Normalized relevance z-score: +2.22; Multi-vector dense+sparse representation fits complex/multi-hop queries"
+    },
+    {
+      "id": "BM-031",
+      "category": "comparison",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 92.83,
+        "retrieval_latency_ms": 92.83,
+        "expected_evidence": "BGE-M3: multi-vector lexical and sparse capabilities, optimized for multilingual... BGE-large-en-v1.5: English-specialized model utilizing the query instruction",
+        "expected_page": 2,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 2,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "comparison",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.3714,
+        "semantic_correctness": 0.5034,
+        "answer_relevance": 0.4837,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 92.83,
+      "selected_model": "BGE-large-en-v1.5",
+      "selection_score": 0.754,
+      "selection_reason": "Highest discriminative margin (\u0394=0.1166); Normalized relevance z-score: +2.50"
+    },
+    {
+      "id": "BM-032",
+      "category": "multi-hop",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 88.25,
+        "retrieval_latency_ms": 88.25,
+        "expected_evidence": "dynamic sliding-window strategy... 250 words... 50 words... embedded vectors undergo L2-normalization prior to index insertion... IndexFlatIP",
+        "expected_page": 4,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 4,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "multi-hop",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.2273,
+        "semantic_correctness": 0.2282,
+        "answer_relevance": 0.3178,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 88.25,
+      "selected_model": "Nomic Embed Text v1.5",
+      "selection_score": 0.7855,
+      "selection_reason": "Highest discriminative margin (\u0394=0.1403); Normalized relevance z-score: +2.24; 8192-token Matryoshka context window ideal for broad contextual synthesis"
+    },
+    {
+      "id": "BM-033",
+      "category": "multi-hop",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 96.47,
+        "retrieval_latency_ms": 96.47,
+        "expected_evidence": "typically ranging between 0.78 and 0.96... elevated baseline cosine distribution (mean 0.84)... three-factor calibrated selection function: 1. Calibrated Z-Score Normalization... 2. Discriminative Confidence Margin... 3. Query Topology Alignment",
+        "expected_page": 5,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 5,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "multi-hop",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.125,
+        "semantic_correctness": 0.1312,
+        "answer_relevance": 0.22,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 96.47,
+      "selected_model": "Nomic Embed Text v1.5",
+      "selection_score": 0.8418,
+      "selection_reason": "Highest discriminative margin (\u0394=0.165); Normalized relevance z-score: +2.35; 8192-token Matryoshka context window ideal for broad contextual synthesis"
+    },
+    {
+      "id": "BM-034",
+      "category": "multi-hop",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 85.99,
+        "retrieval_latency_ms": 85.99,
+        "expected_evidence": "Selected evidence retrieved by the dynamic model selection module is formatted into an immutable citation context block and supplied to the Google Gemini model... temperature is constrained to 0.1",
+        "expected_page": 6,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 6,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "multi-hop",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.325,
+        "semantic_correctness": 0.3812,
+        "answer_relevance": 0.4185,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 85.99,
+      "selected_model": "Nomic Embed Text v1.5",
+      "selection_score": 0.8439,
+      "selection_reason": "Highest discriminative margin (\u0394=0.1663); Normalized relevance z-score: +2.35; 8192-token Matryoshka context window ideal for broad contextual synthesis"
+    },
+    {
+      "id": "BM-035",
+      "category": "multi-hop",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 90.99,
+        "retrieval_latency_ms": 90.99,
+        "expected_evidence": "End-to-end RAG response latency must remain under 1,800 ms at the 95th percentile (P95)... Dynamic selection evaluation overhead must not exceed 8 ms",
+        "expected_page": 7,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 7,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "multi-hop",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.2687,
+        "semantic_correctness": 0.3126,
+        "answer_relevance": 0.3627,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 90.99,
+      "selected_model": "BGE-large-en-v1.5",
+      "selection_score": 0.8468,
+      "selection_reason": "Highest discriminative margin (\u0394=0.1559); Normalized relevance z-score: +2.50; English specialized dense retrieval with high precision on factual specifications"
+    },
+    {
+      "id": "BM-036",
+      "category": "multi-hop",
+      "retrieval": {
+        "recall_at_1": 0.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 0.5,
+        "mrr": 0.5,
+        "first_relevant_rank": 2,
+        "retrieval_latency": 97.01,
+        "retrieval_latency_ms": 97.01,
+        "expected_evidence": "Grounding Score represents the ratio... unanswerable benchmark questions, the system must not fabricate... explicit statement confirming that the requested topic is not contained",
+        "expected_page": 9,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 9,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "multi-hop",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.2034,
+        "semantic_correctness": 0.1842,
+        "answer_relevance": 0.2979,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 97.01,
+      "selected_model": "Nomic Embed Text v1.5",
+      "selection_score": 0.6834,
+      "selection_reason": "Highest discriminative margin (\u0394=0.0903); Normalized relevance z-score: +2.09; 8192-token Matryoshka context window ideal for broad contextual synthesis"
+    },
+    {
+      "id": "BM-037",
+      "category": "multi-hop",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 93.2,
+        "retrieval_latency_ms": 93.2,
+        "expected_evidence": "retaining rigorous page boundary offsets... chunk header immutably encapsulates its origin source filename, integer page number... recorded in an append-only JSON audit log retaining SHA-256",
+        "expected_page": 10,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 10,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "multi-hop",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.3243,
+        "semantic_correctness": 0.3477,
+        "answer_relevance": 0.4121,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 93.2,
+      "selected_model": "Nomic Embed Text v1.5",
+      "selection_score": 0.7377,
+      "selection_reason": "Highest discriminative margin (\u0394=0.1018); Normalized relevance z-score: +2.35; 8192-token Matryoshka context window ideal for broad contextual synthesis"
+    },
+    {
+      "id": "BM-038",
+      "category": "multi-hop",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 93.1,
+        "retrieval_latency_ms": 93.1,
+        "expected_evidence": "HNSW graph topology with M=32 links per node and efConstruction=64 is deployed to maintain sub-15ms retrieval latency... MiniLM <= 12 ms... E5-large <= 55 ms",
+        "expected_page": 4,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 4,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "multi-hop",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.2703,
+        "semantic_correctness": 0.3284,
+        "answer_relevance": 0.3677,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 93.1,
+      "selected_model": "Nomic Embed Text v1.5",
+      "selection_score": 0.5936,
+      "selection_reason": "Highest discriminative margin (\u0394=0.0631); Normalized relevance z-score: +1.76; 8192-token Matryoshka context window ideal for broad contextual synthesis"
+    },
+    {
+      "id": "BM-039",
+      "category": "multi-hop",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 94.35,
+        "retrieval_latency_ms": 94.35,
+        "expected_evidence": "normalized relevance scores below the noise ceiling threshold (0.28), or (2) the dynamic model selection module determines that retrieved evidence contains zero intersecting technical entities",
+        "expected_page": 9,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 9,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "multi-hop",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.3125,
+        "semantic_correctness": 0.3638,
+        "answer_relevance": 0.4056,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 94.35,
+      "selected_model": "Nomic Embed Text v1.5",
+      "selection_score": 0.7362,
+      "selection_reason": "Highest discriminative margin (\u0394=0.1142); Normalized relevance z-score: +2.19; 8192-token Matryoshka context window ideal for broad contextual synthesis"
+    },
+    {
+      "id": "BM-040",
+      "category": "summarization",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 91.75,
+        "retrieval_latency_ms": 91.75,
+        "expected_evidence": "four linear stages: (1) Document Ingestion and PDF Parsing, (2) Semantic Sliding-Window Chunking, (3) Multi-Model Embedding Generation... (4) FAISS Vector Indexing... Dynamic Embedding Model Selection... Google Gemini... Grounding Verification",
+        "expected_page": 1,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 1,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "summarization",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.1895,
+        "semantic_correctness": 0.1648,
+        "answer_relevance": 0.2873,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 91.75,
+      "selected_model": "Nomic Embed Text v1.5",
+      "selection_score": 0.7139,
+      "selection_reason": "Highest discriminative margin (\u0394=0.0986); Normalized relevance z-score: +2.22; 8192-token Matryoshka context window ideal for broad contextual synthesis"
+    },
+    {
+      "id": "BM-041",
+      "category": "summarization",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 92.44,
+        "retrieval_latency_ms": 92.44,
+        "expected_evidence": "BGE-M3... Multilingual-E5-large... BGE-large-en-v1.5... MiniLM... Nomic Embed Text v1.5",
+        "expected_page": 2,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 2,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "summarization",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.2222,
+        "semantic_correctness": 0.2497,
+        "answer_relevance": 0.3155,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 92.44,
+      "selected_model": "Nomic Embed Text v1.5",
+      "selection_score": 0.866,
+      "selection_reason": "Highest discriminative margin (\u0394=0.1797); Normalized relevance z-score: +2.35; 8192-token Matryoshka context window ideal for broad contextual synthesis"
+    },
+    {
+      "id": "BM-042",
+      "category": "summarization",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 94.91,
+        "retrieval_latency_ms": 94.91,
+        "expected_evidence": "three-factor calibrated selection function: 1. Calibrated Z-Score Normalization... 2. Discriminative Confidence Margin... 3. Query Topology Alignment",
+        "expected_page": 5,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 5,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "summarization",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.1667,
+        "semantic_correctness": 0.1542,
+        "answer_relevance": 0.2612,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 94.91,
+      "selected_model": "Multilingual-E5-large",
+      "selection_score": 0.916,
+      "selection_reason": "Highest discriminative margin (\u0394=0.1284); Normalized relevance z-score: +2.40; Strong discriminative margin in multilingual passage space"
+    },
+    {
+      "id": "BM-043",
+      "category": "summarization",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 91.43,
+        "retrieval_latency_ms": 91.43,
+        "expected_evidence": "End-to-end RAG response latency must remain under 1,800 ms at the 95th percentile (P95)... Level-1 caches document page extractions... Level-2 caches pre-computed vector embeddings",
+        "expected_page": 7,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 7,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "summarization",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.338,
+        "semantic_correctness": 0.3328,
+        "answer_relevance": 0.4241,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 91.43,
+      "selected_model": "Nomic Embed Text v1.5",
+      "selection_score": 0.656,
+      "selection_reason": "Highest discriminative margin (\u0394=0.0811); Normalized relevance z-score: +2.00; 8192-token Matryoshka context window ideal for broad contextual synthesis"
+    },
+    {
+      "id": "BM-044",
+      "category": "summarization",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 88.96,
+        "retrieval_latency_ms": 88.96,
+        "expected_evidence": "Supported (Score >= 0.70)... Partially Supported (0.35 <= Score < 0.70)... Unsupported (Score < 0.35): Hallucination flag triggered; output is suppressed or flagged for human audit",
+        "expected_page": 8,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 8,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "summarization",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.1356,
+        "semantic_correctness": 0.1228,
+        "answer_relevance": 0.2319,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 88.96,
+      "selected_model": "Nomic Embed Text v1.5",
+      "selection_score": 0.6558,
+      "selection_reason": "Highest discriminative margin (\u0394=0.0762); Normalized relevance z-score: +2.06; 8192-token Matryoshka context window ideal for broad contextual synthesis"
+    },
+    {
+      "id": "BM-045",
+      "category": "summarization",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": 1,
+        "retrieval_latency": 96.73,
+        "retrieval_latency_ms": 96.73,
+        "expected_evidence": "Role-Based Access Control (RBAC)... Viewer... Analyst... Administrator... append-only JSON audit log retaining SHA-256 integrity hashes for compliance with ISO 27001 and SOC 2 Type II standards",
+        "expected_page": 10,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": 10,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "summarization",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 0.2333,
+        "semantic_correctness": 0.2032,
+        "answer_relevance": 0.3305,
+        "is_unanswerable_handled": false
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 96.73,
+      "selected_model": "Multilingual-E5-large",
+      "selection_score": 0.8972,
+      "selection_reason": "Highest discriminative margin (\u0394=0.1183); Normalized relevance z-score: +2.40; Strong discriminative margin in multilingual passage space"
+    },
+    {
+      "id": "BM-046",
+      "category": "unanswerable",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": null,
+        "retrieval_latency": 78.75,
+        "retrieval_latency_ms": 78.75,
+        "expected_evidence": "",
+        "expected_page": null,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": null,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "unanswerable",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 1.0,
+        "semantic_correctness": 1.0,
+        "answer_relevance": 1.0,
+        "is_unanswerable_handled": true
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 78.75,
+      "selected_model": "Nomic Embed Text v1.5",
+      "selection_score": 0.6735,
+      "selection_reason": "Highest discriminative margin (\u0394=0.075); Normalized relevance z-score: +2.35"
+    },
+    {
+      "id": "BM-047",
+      "category": "unanswerable",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": null,
+        "retrieval_latency": 78.56,
+        "retrieval_latency_ms": 78.56,
+        "expected_evidence": "",
+        "expected_page": null,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": null,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "unanswerable",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 1.0,
+        "semantic_correctness": 1.0,
+        "answer_relevance": 1.0,
+        "is_unanswerable_handled": true
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 78.56,
+      "selected_model": "BGE-large-en-v1.5",
+      "selection_score": 0.7594,
+      "selection_reason": "Highest discriminative margin (\u0394=0.1188); Normalized relevance z-score: +2.33; English specialized dense retrieval with high precision on factual specifications"
+    },
+    {
+      "id": "BM-048",
+      "category": "unanswerable",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": null,
+        "retrieval_latency": 77.78,
+        "retrieval_latency_ms": 77.78,
+        "expected_evidence": "",
+        "expected_page": null,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": null,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "unanswerable",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 1.0,
+        "semantic_correctness": 1.0,
+        "answer_relevance": 1.0,
+        "is_unanswerable_handled": true
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 77.78,
+      "selected_model": "BGE-large-en-v1.5",
+      "selection_score": 0.924,
+      "selection_reason": "Highest discriminative margin (\u0394=0.28); Normalized relevance z-score: +2.50; English specialized dense retrieval with high precision on factual specifications"
+    },
+    {
+      "id": "BM-049",
+      "category": "unanswerable",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": null,
+        "retrieval_latency": 75.4,
+        "retrieval_latency_ms": 75.4,
+        "expected_evidence": "",
+        "expected_page": null,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": null,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "unanswerable",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 1.0,
+        "semantic_correctness": 1.0,
+        "answer_relevance": 1.0,
+        "is_unanswerable_handled": true
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 75.4,
+      "selected_model": "Nomic Embed Text v1.5",
+      "selection_score": 0.7413,
+      "selection_reason": "Highest discriminative margin (\u0394=0.1341); Normalized relevance z-score: +2.14"
+    },
+    {
+      "id": "BM-050",
+      "category": "unanswerable",
+      "retrieval": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "mrr": 1.0,
+        "first_relevant_rank": null,
+        "retrieval_latency": 78.62,
+        "retrieval_latency_ms": 78.62,
+        "expected_evidence": "",
+        "expected_page": null,
+        "expected_source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "page": null,
+        "source": "Enterprise_AI_Architecture_and_Governance_Specification_2025.pdf",
+        "category": "unanswerable",
+        "is_hit": true
+      },
+      "answer_eval": {
+        "keyword_overlap_score": 1.0,
+        "semantic_correctness": 1.0,
+        "answer_relevance": 1.0,
+        "is_unanswerable_handled": true
+      },
+      "grounding": {
+        "grounding_score": 1.0,
+        "grounding_status": "supported"
+      },
+      "latency_ms": 78.62,
+      "selected_model": "BGE-M3",
+      "selection_score": 0.924,
+      "selection_reason": "Highest discriminative margin (\u0394=0.28); Normalized relevance z-score: +2.22; Multi-vector dense+sparse representation fits complex/multi-hop queries"
+    }
+  ]
+}
