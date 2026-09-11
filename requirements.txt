@@ -1,0 +1,16 @@
+streamlit
+nltk
+numpy
+pandas
+scikit-learn
+matplotlib
+seaborn
+tensorflow
+torch
+transformers
+sentence-transformers
+faiss-cpu
+pymupdf
+google-generativeai
+python-dotenv
+Pillow
